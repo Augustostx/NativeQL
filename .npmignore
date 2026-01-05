@@ -1,0 +1,37 @@
+# Source
+src
+tsconfig.json
+tslint.json
+eslintrc.js
+.prettierrc
+babel.config.js
+jest.config.js
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Git
+.gitignore
+.gitattributes
+
+# Test
+coverage
+__tests__
+test
+
+# CI
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Other
+examples
+scripts
+.editorconfig
+*.tsbuildinfo

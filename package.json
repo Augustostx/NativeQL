@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "nativeql",
+  "version": "1.0.0",
+  "description": "A lightweight TypeORM-like ORM for React Native with SQLite",
+  "main": "dist/index.js",
+  "bin": {
+    "nativeql": "dist/cli/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bes-js/nativeql.git",
+    "directory": "packages/nativeql"
+  },
+  "author": {
+    "name": "Bes-js",
+    "url": "https://github.com/Bes-js"
+  },
+  "bugs": {
+    "url": "https://github.com/Bes-js/nativeql/issues"
+  },
+  "homepage": "https://github.com/Bes-js/nativeql#readme",
+  "license": "MIT",
+  "funding": {
+    "type": "buymeacoffee",
+    "url": "https://www.buymeacoffee.com/beykant"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "orm",
+    "sqlite",
+    "expo",
+    "typeorm",
+    "react-native-sqlite-storage",
+    "expo-sqlite",
+    "sqlite3",
+    "nativeql"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node src/test/demo.ts"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.1.0",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.2",
+    "figlet": "^1.9.4",
+    "glob": "^13.0.0",
+    "gradient-string": "^3.0.0",
+    "ora": "^5.4.1",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.1.7"
+  },
+  "peerDependencies": {
+    "expo-sqlite": "^16.0.10",
+    "react-native-sqlite-storage": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo-sqlite": {
+      "optional": true
+    },
+    "react-native-sqlite-storage": {
+      "optional": true
+    },
+    "sqlite3": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^18.0.0",
+    "@types/ora": "^3.1.0",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}
